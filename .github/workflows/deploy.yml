@@ -26,6 +26,9 @@ jobs:
       - name: Build
         run: npx quartz build
 
+      - name: Add .nojekyll file
+        run: touch public/.nojekyll
+
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
